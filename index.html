@@ -4,19 +4,24 @@
 	<meta charset="UTF-8">
 	<title>Template</title>
 	<link rel="stylesheet" type="text/css" 	href="css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" 	href="css/style.scss">
+	<link rel="stylesheet" type="text/css" 	href="css/style.css">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="js/bootstrap.js"></script>
 	<script src="js/bouton.js"></script>
 	
 </head>
 <style>
+	
+	@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+
+
+	
 	body{
-		background: rgb(225, 227, 228);
+		background: rgb(191,88,100);
+background: radial-gradient(circle, rgba(191,88,100,1) 0%, rgba(103,14,14,1) 100%);
 	}
-	nav{
-		height: 4em;
-	}
+	
 	#name_title{
 		background-image: url('img/name_title.jpg');
 		background-position: 0cm;
@@ -26,53 +31,73 @@
 		text-decoration: none;
 		color: black;
 	}
+
+	h1{
+		font-family: 'Play', sans-serif;
+	}
+	p{
+		font-family: 'Play', sans-serif;
+		color: white;
+	}
+	nav{
+		background-color: rgb(0, 0, 0);
+		color: white;
+		border-inline: 20px solid rgb(148, 56, 56);
+	}
+	
 	
 </style>
 
 <body>
 	<!-- Navbar moderne -->
-<nav class="navbar navbar-expand-sm bg-light navbar-light border shadow p-4 mb-4">
+<nav class="navbar navbar-expand-sm p-4 mb-4 sticky-top">
 		
 	<!-- Petit carré jaune avant le titre -->
 	<p><div class="bg-warning rounded-circle mx-1" style="width: 1em; height: 1em;"></div>
-	<h1 class="h3 text-dark float-left">Leclerc Ludwig /</h1>
-	<h1 class="h5 text-dark my-1"> Développeur web</h1></nav></p>
+	<h1 class="h3 text-dark float-left my-1 text-white">Leclerc Ludwig / Développeur web</h1>
+
 
 </nav>
 
 <!-- Contenu de la page -->
 <div class="container-fluid">
 	<!--card-->
-<section class="row mx-auto align-content-center ">
-	<div class=" col-md-4 card border shadow-lg my-3 mx-auto" style="background-color: rgb(238, 238, 238);">
+<section class="row mx-auto align-content-center rounded-2">
+	<div class=" col-lg-4 shadow-lg my-3 mx-auto text-center" id="info">
 		<img src="img/IDPhoto_20221006_154646.jpg" class="rounded-circle mx-auto my-4" style="width: 15em; height: 15em;">
-		<h1 class="h3 text-center">Ludwig Leclerc</h1>
-		<div class="card-footer bg-light">
-			<p class="text-center">Développeur web</p>
+		<div id="infoPerso">
+			<h1 class="h3 text-center">Ludwig Leclerc</h1>
+			<div >
+				<h1 class="text-center h5">Développeur web</h1>
+				</div>
+			<div>		
+				<p><img style="width: 3em;" class="img-fluid " src="img/envelope-150686_1280.webp">
+				ludwig.leclerc22@gmail.com</p>
 			</div>
-		<div class="card-footer bg-light">		
-			<p></p><img style="width: 3em;" class="img-fluid " src="img/5a376dd2ab7fb4.1577847815135820347025.png">
-			ludwig.leclerc22@gmail.com</p>
+		</div>	
+		<!--github-->
+		<div class="text-center">
+			<a href="https://github.com/LeclercLudwig"><img style="width: 3em;" class="img-fluid " src="img/github.png" id="zoom"></a>
 		</div>
 	</div>
-	<div class="col-md-5 mx-auto  border my-3">
-		<ul class="nav nav-tabs" role="tablist">
+	<div class="col-lg-5 mx-auto my-3" id="info">
+		<ul class="nav nav-tabs" role="tablist" style="background-color: rgb(189, 84, 84);">
 			<li class="nav-item">
-				<a class="nav-link active" data-bs-toggle="tab" href="#propos">A propos !</a>
+				<a class="nav-link active" data-bs-toggle="tab" style="color: black" href="#propos"><strong>A propos ! </strong></a>
 			  </li>
 			<li class="nav-item">
-			  <a class="nav-link" data-bs-toggle="tab" href="#competences">Compétences</a>
+			  <a class="nav-link" style="color: black;" data-bs-toggle="tab" href="#competences"><strong>Compétences </strong></a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" data-bs-toggle="tab" href="#experiences">Expériences</a>
+			  <a class="nav-link" data-bs-toggle="tab"style="color: black;" href="#experiences"><strong>Expériences </strong></a>
 			</li>
 		
 		  </ul>
 		
 		  <!--Les différentes fenêtres-->
 		  
-		  <div class="tab-content bg-light border shadow-lg" style="height: 30em;">
-			<div class="tab-content bg-light border shadow-lg" style="height: 30em;">
+	
+			<div class="tab-content bg-light shadow-lg" style="height: 51em;">
 				<div id="propos" class="container tab-pane active"><br>
 				  <h3 class="text-center">A propos</h3>
 				  <!--Compétences-->
@@ -85,14 +110,35 @@
 			<div id="competences" class="container tab-pane fade"><br>
 			  <h3 class="text-center">COMPETENCES</h3>
 			  <!--Compétences-->
-					<p class="text-center">HTML5</p>
-					<p class="text-center">CSS3</p>
-					<p class="text-center">Bootstrap</p>
-					<p class="text-center">Javasript</p>
-					<p class="text-center">Angular</p>
-					<p class="text-center">PHP</p>
-					<P class="text-center">SQL</P>
+				<h5 class="text-center">Language de présentation</h5>
+					<!---image centré-->
+					<div class="text-center" id="zoom">
+						<img src="img/html.png" class="rounded-circle mx-auto my-4 img-fluid" style="width: 5em; height: 5em; ">
+						<img src="img/css.png" class="rounded-circle mx-auto my-4 img-fluid" style="width: 5em; height: 5em;">
+					</div>
+					<!--framework de présentation-->
+					<h5 class="text-center">Framework CSS</h5>
+					<div class="text-center">
+						<img src="img/bootstrap.png" class="rounded-circle mx-auto my-1 img-fluid" style="width: 8em; height: 8em;" id="zoom">
+					</div>
+					<!--language de programmation-->
+					<h5 class="text-center">Language de programmation</h5>
+					<div class="text-center">
+						<img src="img/js.png" class=" mx-auto my-4 img-fluid" style="width: 4em; height: 4em;" data-bs-toggle="tooltip" title="javascript" id="zoom">
+						<img src="img/php.png" class="rounded-circle mx-auto my-4 img-fluid" style="width: 5em" id="zoom">
+					</div>
+					<!--framework de programmation-->
+					<h5 class="text-center">Framework de programmation</h5>
+					<div class="text-center">
+						<img src="img/angular.png" class="rounded-circle mx-auto my-4 img-fluid" style="width: 5em; height: 5em;" id="zoom">
+					</div>
+					<!--base de données-->
+					<h5 class="text-center">Base de données</h5>
+					<div class="text-center">
+						<img src="img/sql.png" class="rounded-circle mx-auto img-fluid" style="width: 5em; height: 5em;" id="zoom">
+					</div>
 			</div>
+			<!--Expériences-->
 			<div id="experiences" class="container tab-pane fade"><br>
 			  <h3 class="text-center">EXPERIENCES</h3>
 				<p  class="text-center"><strong>Expériences - 3 ans de commerce</strong></p>
@@ -108,5 +154,8 @@
 	</div>
 
 </section>
+</div>
+<!--Fin du contenu de la page-->
+
 </body>
 </html>							
